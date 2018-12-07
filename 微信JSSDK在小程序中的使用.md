@@ -237,25 +237,15 @@ class WX {
      */
     async getConfig() {
         try {
-            let url = '//aifashion.jd.com/activity/wx/sdk/js'
+            let url = '正式api地址'
             if (__DEV__) { // webpack构建对象，依赖webpack
-                /**
-                 * 测试环境使用测试账号
-                 * 地址：https://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&t=sandbox/index
-                 * 配置信息如下：
-                 * appID: wxd872875c3a317743
-                 * appsecret: 09a7092ec7f24b0b370ee3dfef486065
-                 * URL：http://prefashion.jd.com/activity/test/wx/call/js
-                 * Token：sair
-                 * 域名：不带`http://`的线上域名，如：dfq.jd.com
-                 */
-                url = '//wxfashion.jd.com/activity/test/wx/sdk/js'
+                url = '测试api地址'
             }
             let res = await axios({
                 method: 'get',
                 url: url,
                 params: {
-                    key: '1e980d18c58678dea102c12',
+                    key: 'xxxxx',
                     // url需要encodeURIComponent，后台decodeURIComponent解码
                     url: window.location.href.split('#')[0],
                 }
