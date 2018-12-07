@@ -2,7 +2,7 @@
 
 ## 背景
 
-在`H5`中使用`canvas`时，经常使用到`Base64`图，原因在于`canvas`有相关能力将`canvas`转换为`Base64`图，而这种图片无法直接渲染到画布中，需要我们像`load`一个`http`的图像一样进行`load`后才能渲染到`canvas`中。
+在`H5`中使用`canvas`时，经常使用到`Base64`图，原因在于`canvas`有相关能力将`canvas`转换为`Base64`图，而这种图片无法直接渲染到画布中，需要我们像`load`一个`http`的图像一样进行`load`后才能渲染到`canvas`中。
 
 而某些低版本`(8.3-11.0)`的`ios`系统中，触发`img.onerror`事件。原因为：浏览器对`Base64`的长度有一些限制问题，参考[这里](https://stackoverflow.com/questions/21728604/ie10-base64-encoded-image-load-error)。
 
@@ -48,4 +48,4 @@
         img.src = url
     })
 }
-```
+```
